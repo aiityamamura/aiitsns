@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import django_heroku
 import os
 from pathlib import Path
 
@@ -172,3 +172,5 @@ EMAIL_USE_TLS = True # SMTP サーバと通信する際に TLS (セキュア) �
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # mediaのURLを登録
 MEDIA_URL = '/media/'
+
+django_heroku.settings(locals())
